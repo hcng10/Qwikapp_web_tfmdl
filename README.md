@@ -39,7 +39,7 @@ This component uses a MobileNetV3 model to classify the cropped LFT regions into
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/lft_detection_classification.git](https://github.com/hcng10/qwikapp_web_tfmdl.git
+   git clone https://github.com/hcng10/qwikapp_web_tfmdl.git
    cd lft_detect
    ```
    Or if you need to run lft_classify
