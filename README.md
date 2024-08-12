@@ -41,7 +41,20 @@ This component uses a MobileNetV3 model to classify the cropped LFT regions into
    ```bash
    git clone https://github.com/yourusername/lft_detection_classification.git](https://github.com/hcng10/qwikapp_web_tfmdl.git
    cd lft_detect
+   ```
+   Or if you need to run lft_classify
+
+   ```bash
+   cd lft_classify
+   ```
 
 2. **Set Up Environment Variables:**
+   
+   2.1 Edit `.env` and replace the filenames for the LFT photos
+   
 3. **Running the Services:**
-4.   
+   
+      ```bash
+      docker compose up
+      ```
+
