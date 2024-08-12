@@ -1,0 +1,10 @@
+services:
+  deepblue_detect:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+      - ${DB_ROOT}/images:/images:ro
+      - ${DB_ROOT}/cropped:/cropped
+      - ${DB_ROOT}/result:/result
