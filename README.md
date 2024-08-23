@@ -1,5 +1,16 @@
 # Qwikapp_web_tfmdl: Tensorflow Model on Qwikapp web
 
+### Important note before deploying into the Qwikapp web ML pipeline
+
+The `User nobody` line in the Docker file needs to be uncommented.
+
+### Other important notes
+
+- The models were capitalised, and docker do not allowe image names except in lowercase. So, they should not be created as Deepblue\_detect, but deepblue\_detect. Only lowercase and underscores.
+- Things worked locally probably because the docker\_compose.yml file was overriding the directory within the container with the local files, but in production the docker\_compose.yml file is not used, only the Dockerfile.
+- [This](https://github.com/ImperialCollegeLondon/qwikapp_ai_model_template/blob/main/README.md#wait-where-are-my-inputs) explains where the environment variables are taken as full paths.
+
+
 ## Overview
 This project consists of two dockerize components: LFT Detect and LFT Classify. Together, they provide a complete solution for processing lateral flow test (LFT) images. The detection component identifies and crops regions of interest within an LFT image, while the classification component categorizes these regions as 'invalid', 'negative', or 'positive'.
 

@@ -14,8 +14,10 @@ from warnings import warn
 
 #from img_processor import *
 
-crop_image_path = '/cropped/' + str(os.environ["IMAGE_NAME_CROPPED"])
-result_info = '/result/' + str(os.environ["RESULT"])
+#crop_image_path = '/cropped/' + str(os.environ["IMAGE_NAME_CROPPED"])
+#result_info = '/result/' + str(os.environ["RESULT"])
+crop_image_path = os.environ["IMAGE_NAME_CROPPED"]
+result_info = os.environ["RESULT"]
 
 h5_FILENAME = "./model_mobilenet3l.h5"
 
@@ -113,5 +115,5 @@ print("The predicted class is: " + str(predicted_class))
 
 # Finally, save the test result to a text file, so it can be read back from QwikApp
 with open(result_info, "w") as f:
-    f.write(result_info)
+    f.write(str(predicted_class))
     f.close()

@@ -14,13 +14,6 @@ from warnings import warn
 
 from img_processor import *
 
-import subprocess
-result = subprocess.run(
-        ["ls"],
-        stdout=subprocess.PIPE, 
-        stderr=subprocess.PIPE
-    )
-
 
 h5_FILENAME = "./model_yolov8xs.h5"
 
@@ -43,9 +36,11 @@ class_mapping = dict(zip(range(len(class_ids)), class_ids))
 #image_path = '738original_2024-02-27-151112_DeepBlue_100ngmL-1.jpg'
 #crop_image_path = '738original_2024-02-27-151112_DeepBlue_100ngmL-1_crop.jpg'
 
-image_path = '/images/' + str(os.environ["IMAGE_NAME"])
-crop_image_path = '/cropped/' + str(os.environ["IMAGE_NAME_CROPPED"])
-result_info = '/result/' + str(os.environ["RESULT"])
+
+image_path = os.environ["IMAGE_NAME"]
+crop_image_path = os.environ["IMAGE_NAME_CROPPED"]
+result_info = os.environ["RESULT"]
+
 
 #print(image_path)
 #print(crop_image_path)
